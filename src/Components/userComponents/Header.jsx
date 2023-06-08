@@ -172,7 +172,7 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
             >
               Find Jobs
             </Link>
-            <Link
+            {/* <Link
               component="button"
               variant="body2"
               underline="none"
@@ -180,7 +180,7 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
               sx={{ marginLeft: 2, color: "black", display: "block" }}
             >
             Company Review
-            </Link>
+            </Link> */}
           </Box>
           {seeker ? (
             <Box sx={{ flexGrow: 0.01 }}>
@@ -259,20 +259,20 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
           />
           
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <Link
+            <Button
               target="_blank"
               component={Button}
               variant="body2"
               underline="none"
               onClick={() =>{
-                window.open('/employerLogin', '_blank');
+                navigate('/employerLogin')
 
               }}
               sx={{ my:2,color:"black",display:"block" }}
             >
               Employers/Post Job
 
-            </Link>
+            </Button>
           </Box>
         </Toolbar>
       </Container>
