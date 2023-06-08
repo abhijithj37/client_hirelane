@@ -137,9 +137,9 @@ import { setEmployer } from "../../app/features/employerSlice";
                 error={!!formError.password}
                 helperText={formError.password||" "}
               />
-              <Link color={'secondary'} href="/employerSignup" underline="none">
+              <Button color={'secondary'} onClick={()=>navigate('/employerSignup')} underline="none">
                 Dont have an account?
-              </Link>
+              </Button>
               <Button
                 sx={{marginTop:2}}
                 variant="contained"
