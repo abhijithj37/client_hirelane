@@ -42,7 +42,7 @@ import { setEmployer } from "../../app/features/employerSlice";
         return;
       }
       axios
-        .post(`/employer/login`, formData, { withCredentials: true })
+        .post(`employer/login`, formData, { withCredentials: true })
         .then(({ data }) => {
           dispatch(setEmployer(data.user))
           navigate("/employer");

@@ -59,7 +59,7 @@ import { setEmployer } from "../../app/features/employerSlice";
      const data={
       email
       }
-      axios.post('/employer/verify-email',data,{withCredentials:true}).then(()=>{
+      axios.post('employer/verify-email',data,{withCredentials:true}).then(()=>{
        setAlert(true)
       setVerifying(true)
       startTimer()
