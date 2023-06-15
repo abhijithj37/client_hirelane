@@ -62,7 +62,7 @@ import { useNavigate } from "react-router-dom";
                     {seeker.image!=="" ? (
                     <Avatar
                         sx={{ width: 100, height: 100 }}
-                        src={`http://localhost:4001/image/${seeker.image}`}
+                        src={`https://fashionbytes.online/seeker/image/${seeker.image}`}
                     ></Avatar>
                     ) : (
                     <Avatar

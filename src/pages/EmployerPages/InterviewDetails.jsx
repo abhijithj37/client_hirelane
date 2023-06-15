@@ -161,7 +161,7 @@ function InterviewDetails() {
               <Box>
                 <Avatar
                   sx={{ width: 56, height: 56 }}
-                  src={`http://localhost:4001/image/${application?.image}`}
+                  src={`https://fashionbytes.online/seeker/image/${application?.image}`}
                 ></Avatar>
               </Box>
               <Box marginLeft={1}>

@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -187,7 +186,7 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Typography>{seeker?.email}</Typography>
-                  <Avatar src={`http://localhost:4001/image/${seeker.image}`} />{" "}
+                  {" "}
                 </IconButton>
                 
               </Tooltip>
@@ -247,7 +246,7 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
                 underline="none"
                 sx={{ my: 2, color: "blue", display: "block" }}
               >
-                Log In
+                Sign In
               </Button>
             </Box>
           )}

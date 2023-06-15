@@ -105,8 +105,8 @@ import {
   
       if (input === "") return setJobsuggessions([]);
 
-      axios
-        .get(`http://localhost:4005/locations?input=${input}`,{
+      server 
+        .get(`/posts/locations?input=${input}`,{
           withCredentials:true,
         })
         .then(({data})=>{

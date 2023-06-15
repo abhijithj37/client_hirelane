@@ -340,7 +340,7 @@ function Applicants() {
                             <TableCell component="th" scope="row">
                               <Box display={"flex"}>
                                 <Avatar
-                                  src={`http://localhost:4001/image/${element.image}`}
+                                  src={`https://fashionbytes.online/seeker/image/${element.image}`}
                                 ></Avatar>
                                 <Box marginLeft={1}>
                                   <Typography fontWeight={600}>

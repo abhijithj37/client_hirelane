@@ -24,7 +24,7 @@ import { useSelector, useDispatch } from "react-redux";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import PsychologyIcon from "@mui/icons-material/Psychology";
-import axios from "axios";
+import axios from "../../axios";
 import { useNavigate } from "react-router-dom";
 import { setSeeker } from "../../app/features/seekerSlice";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -266,7 +266,7 @@ function BuildResume() {
 
         formBody.append("data", JSON.stringify(data));
         axios
-          .put("http://localhost:4001/updateProfile", formBody, {
+          .put("/seeker/updateProfile", formBody, {
             withCredentials: true,
             headers: {
               "Content-Type": "multipart/form-data",
@@ -344,14 +344,14 @@ function BuildResume() {
 
               <Grid container item lg={12}>
                 <Grid item lg={2} border={0}>
-                  {imagePreview ? (
+                  {/* {imagePreview ? (
                     <Avatar
                       src={imagePreview}
                       sx={{ bgcolor: "green", width: 80, height: 80 }}
                     ></Avatar>
                   ) : seeker.image ? (
                     <Avatar
-                      src={`http://localhost:4001/image/${image}`}
+                      src={`https://fashionbytes.online/seeker/image/${image}`}
                       sx={{ bgcolor: "green", width: 80, height: 80 }}
                     ></Avatar>
                   ) : (
@@ -374,7 +374,7 @@ function BuildResume() {
                       multiple
                       type="file"
                     />
-                  </Button>
+                  </Button> */}
                 </Grid>
 
                 <Grid container item spacing={2} border={0} lg={10}>
@@ -816,10 +816,10 @@ function BuildResume() {
                   {/* *********************************************ITEM 1**************************************************************** */}
                   <Grid item container border={0} lg={12}>
                     <Grid item lg={2}>
-                      {seeker.image !== "" ? (
+                      {/* {seeker.image !== "" ? (
                         <Avatar
                           sx={{ width: 100, height: 100 }}
-                          src={`http://localhost:4001/image/${seeker.image}`}
+                          src={`https://fashionbytes.online/seeker/image/${seeker.image}`}
                         ></Avatar>
                       ) : (
                         <Avatar
@@ -830,7 +830,7 @@ function BuildResume() {
                             {seeker.fName[0]}
                           </Typography>
                         </Avatar>
-                      )}
+                      )} */}
                     </Grid>
                     <Grid item lg={10}>
                       <Typography color={"primary"} variant="h4">

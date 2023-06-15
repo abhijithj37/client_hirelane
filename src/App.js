@@ -169,7 +169,7 @@ function App() {
         <Route
           path="/start-meet"
           element={
-            employer ? <EmpInterviewPage /> : <Navigate to={"/employerLogin"} />
+          employer ? <EmpInterviewPage /> : <Navigate to={"/employerLogin"} />
           }
         ></Route>
         <Route

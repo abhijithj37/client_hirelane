@@ -65,7 +65,7 @@ function CandidateDetails({setIndex, jobApplication}){
       >
         <Box display={'flex'}>
           <Box>
-            <Avatar sx={{width:56,height:56}} src={`http://localhost:4001/image/${jobApplication?.image}`}></Avatar>
+            <Avatar sx={{width:56,height:56}} src={`https://fashionbytes.online/seeker/image/${jobApplication?.image}`}></Avatar>
           </Box>
           <Box marginLeft={1}> 
           <Typography variant="h5">

@@ -120,7 +120,7 @@ function ApplicationDetails() {
 
                     >
                       <Box display={'flex'}>
-                        <Box><Avatar src={`http://localhost:4001/image/${element.image}`}/></Box>
+                        <Box><Avatar src={`https://fashionbytes.online/seeker/image/${element.image}`}/></Box>
                          <Box marginLeft={1}>
                         <Typography fontWeight={500}>{element.fName} {element.lName}</Typography>
                         <Typography variant="body2" >{element.email}</Typography>

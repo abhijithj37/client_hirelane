@@ -11,7 +11,7 @@ function EmployerConversation({ conversation, onlineUsers,searchQuery }) {
   const [unreadMessages,setUnreadMessages]=useState([])
   
   const dispatch = useDispatch();
-   
+  
   useEffect(() => {
     if (conversation) {
       const id = conversation.chatUsers.find((id) => id !== employer?._id);
@@ -74,10 +74,10 @@ function EmployerConversation({ conversation, onlineUsers,searchQuery }) {
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             variant="dot"
           >
-            <Avatar src={`http://localhost:4001/image/${user?.image}`} alt="Remy Sharp"></Avatar>
+            <Avatar src={`https://fashionbytes.online/seeker/image/${user?.image}`} alt="Remy Sharp"></Avatar>
           </StyledBadge>
         ) : (
-          <Avatar src={`http://localhost:4001/image/${user?.image}`}></Avatar>
+          <Avatar src={`https://fashionbytes.online/seeker/image/${user?.image}`}></Avatar>
         )}
         <div  style={{ marginLeft: "10px",display:'flex',justifyContent:'space-between',width:'100%', alignItems:'center' }}>
           <Box>

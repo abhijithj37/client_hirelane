@@ -9,11 +9,11 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("fashionbytes.online/chat"),[]);
+  const socket = useMemo(() => io("https://fashionbytes.online/chat"),[]);
   
   return (
     <SocketContext.Provider value={socket}>
-      {props.children}
+      {props.children} 
     </SocketContext.Provider>
   );
 };

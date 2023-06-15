@@ -18,7 +18,6 @@ import EmployerConversation from "../../Components/EmployerComponents/EmployerCo
 import EmployerMessages from "../../Components/EmployerComponents/EmployerMessages";
 import axios from "../../axios";
 import { useDispatch, useSelector } from "react-redux";
-import { io } from "socket.io-client";
 import { StyledBadge } from "../../Components/userComponents/SeekerConversation";
 import Logo from '../../images/logo.png'
 import { setNewMessage } from "../../app/features/employerSlice";
@@ -38,7 +37,7 @@ function EmployerChat() {
  const socket=useSocket()
  
  useEffect(()=>{
-         socket?.emit("addUser",employer?._id)
+        socket?.emit("addUser",employer?._id)
         socket.on("onlineUsers",(onlineUsers)=>{
         console.log(onlineUsers,'its the online users');
         setOnlineUsers(onlineUsers)
@@ -242,12 +241,12 @@ function EmployerChat() {
                       anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                       variant="dot"
                     >
-                      <Avatar src={`http://localhost:4001/image/${chatUser?.image}`} alt="Remy Sharp" >
+                      <Avatar src={`https://fashionbytes.online/seeker/image/${chatUser?.image}`} alt="Remy Sharp" >
                         
                       </Avatar>
                     </StyledBadge>
                   ) : (
-                    <Avatar src={`http://localhost:4001/image/${chatUser?.image}`} >
+                    <Avatar src={`https://fashionbytes.online/seeker/image/${chatUser?.image}`} >
                     
                     </Avatar>
                   )}
