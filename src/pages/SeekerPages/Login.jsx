@@ -43,13 +43,14 @@ function Login(){
     return;
     }
 
+    
     axios
       .post(`/seeker/login`,formData,{ withCredentials: true })
       .then(({ data })=>{
         dispatch(setSeeker(data.user));
         navigate("/");
       })
-      .catch((error) => {
+      .catch((error) =>{
         if(error.response&&error.response.status === 422) {
           setFormError(error.response.data.errors);
         }else{
@@ -59,6 +60,7 @@ function Login(){
   };
 
  
+
    const  handleCallbackResponse = useCallback((response)=> {
     const token = response.credential;
     axios
@@ -89,6 +91,8 @@ function Login(){
       size:"large",
     });
   }, [handleCallbackResponse]);
+
+
 
   return (
     <div>
@@ -167,5 +171,6 @@ function Login(){
     </div>
   );
 }
+
 
 export default Login;
