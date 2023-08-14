@@ -14,6 +14,7 @@ import axios from "../../axios"
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setEmployer } from "../../app/features/employerSlice";
+import logo from '../../images/logo.png'
  function EmployerSignUp(){
   const navigate=useNavigate();
   const dispatch=useDispatch();
@@ -138,7 +139,7 @@ import { setEmployer } from "../../app/features/employerSlice";
       .post(`/employer/signup`,data,{withCredentials:true})
       .then((res)=>{
         dispatch(setEmployer(res.data.user))
-         navigate("/employer");
+         navigate("/emp");
        })
        .catch((error) => {
         if (error.response && error.response.status === 422){
@@ -183,11 +184,14 @@ import { setEmployer } from "../../app/features/employerSlice";
             borderColor:"lightgray",
           }}
         >
+           <Box marginBottom={3} display={"flex"} justifyContent={'center'} width='100%'> 
+            <img width={100} src={logo} alt="logo" />
+            </Box>
           <Typography color={"red"} textAlign={"center"}>
             {errorMessage}
           </Typography>
     
-          <Typography variant="h5" marginBottom={2} gutterBottom color={"secondary"}>
+          <Typography variant="h6" marginBottom={.5} gutterBottom color={"secondary"}>
             Employer Sign Up
           </Typography>
         
@@ -289,14 +293,14 @@ import { setEmployer } from "../../app/features/employerSlice";
             </Box>
               
             </>}
-            {!verifying&& <Button onClick={()=>navigate('/employerLogin')} sx={{textTransform:'none'}}>
-               <Typography>already have an account?</Typography>  
+            {!verifying&& <Button color="secondary" onClick={()=>navigate('/employerLogin')} sx={{textTransform:'none'}}>
+               <Typography  >already have an account?</Typography>  
             </Button>}
 
              {!verifying&&<Button
               sx={{marginTop:2}}
               variant="contained"
-              color="primary"
+              color="secondary"
               onClick={handleSubmit}
               fullWidth
             >

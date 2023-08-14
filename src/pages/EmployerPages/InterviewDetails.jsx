@@ -200,7 +200,7 @@ function InterviewDetails() {
                       image: application?.image,
                     })
                   );
-                  navigate("/employer/employerChat");
+                  navigate("/emp/employerChat");
                 }}
               >
                 Message

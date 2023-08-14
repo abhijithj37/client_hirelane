@@ -11,7 +11,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSeeker } from "../../app/features/seekerSlice";
- 
+ import logo from '../../images/logo.png'
 
 function Login(){
   const [errorMessage, setErrorMessage] = useState("");
@@ -109,12 +109,15 @@ function Login(){
             borderColor:"lightgray",
           }}
         >
+           <Box marginBottom={3} display={"flex"} justifyContent={'center'} width='100%'> 
+            <img width={130} src={logo} alt="logo" />
+            </Box>
           <Typography textAlign={"center"} color={"red"}>
             {errorMessage}
           </Typography>
           <Typography
-            marginBottom={3}
-            variant="h5"
+            marginBottom={1}
+            variant="h6"
             gutterBottom
             color={"primary"}
           >

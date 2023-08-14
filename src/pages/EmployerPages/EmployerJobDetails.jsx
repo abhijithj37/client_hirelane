@@ -94,7 +94,7 @@ import JobDetailSkeleton from "../../Skeletons/JobDetailSkeleton";
                         sx={{ marginTop: 1, height: 40 }}
                         variant="contained"
                         onClick={() =>
-                          navigate(`/employer/editJob/${jobDetails._id}`)
+                          navigate(`/emp/editJob/${jobDetails._id}`)
                         }
                       > 
                         Edit Post

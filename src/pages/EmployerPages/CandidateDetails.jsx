@@ -102,7 +102,7 @@ function CandidateDetails({setIndex, jobApplication}){
               _id:jobApplication?.candidateId,
               image:jobApplication?.image
             }))
-            navigate('/employer/employerChat')
+            navigate('/emp/employerChat')
             }}
           >
             Message

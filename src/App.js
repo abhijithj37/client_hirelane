@@ -130,15 +130,15 @@ function App() {
         <Route
           path="/employerSignup"
           element={
-          employer?<Navigate to={"/employer"} />:<EmployerSignUp/>
+          employer?<Navigate to={"/emp"} />:<EmployerSignUp/>
           }
         />
         <Route
           path="/employerLogin" 
-          element={employer ? <Navigate to={"/employer"} /> : <EmployerLogin />}
+          element={employer ? <Navigate to={"/emp"} /> : <EmployerLogin />}
         ></Route>
         <Route
-          path="/employer"
+          path="/emp"
           element={
             employer ? <Dashboard /> : <Navigate to="/employerLogin" replace />
           }

@@ -78,7 +78,7 @@ function EmployerApplication() {
                   </Grid>
                   <Grid item lg={2}>
                     <Box>
-                      <Button onClick={()=>navigate(`/employer/applicationdetails/${element._id}`)} size="small" variant={"outlined"}>
+                      <Button onClick={()=>navigate(`/emp/applicationdetails/${element._id}`)} size="small" variant={"outlined"}>
                         View Details
                       </Button>
                     </Box>

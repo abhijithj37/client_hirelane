@@ -91,7 +91,7 @@ import {
       server
         .put(`/posts/updatePost/${id}`,data,{withCredentials:true})
         .then((res)=>{
-            navigate(`/employer/jobDetails/${id}`);
+            navigate(`/emp/jobDetails/${id}`);
             window.alert('Job Updated  Successfully')
         })
         .catch((error)=>{

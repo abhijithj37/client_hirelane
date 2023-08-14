@@ -96,7 +96,7 @@ function CreateNewPost() {
     server
       .post("/posts/postJob",data,{withCredentials:true})
       .then(()=>{
-          navigate("/employer");
+          navigate("/emp");
           window.alert('Job Posted  Successfully')
       })
       .catch((error) => { 

@@ -27,42 +27,6 @@ function EmployerMessages({messages}) {
 
               <EmployerSingleMessage scrollRef={scrollRef} key={index} message={message}/>
 
-    //           <div
-    //           ref={scrollRef}
-    //              key={index}
-    //               style={{
-    //               display:"flex",
-    //               justifyContent:
-    //               message.from ==`${employer?._id}` ? "flex-end" : "flex-start",
-    //               marginBottom: "10px",
-    //             }}
-    //           >
-
-    //             <div
-    //               style={{
-    //                 backgroundColor: 
-    //                 message.from === `${employer?._id}`? "#3f51b5" : "#f5f5f5",
-    //                 color: message.from ===`${employer?._id}` ? "#fff" : "#000",
-    //                 borderRadius:"17px",
-    //                 padding:"10px",
-    //                 maxWidth:"70%",
-    //                 wordBreak:"break-word",
-    //               }}
-    //             >
-    //               {message?.message}
-    //             </div>
-    //             <div
-    //   style={{
-    //     alignSelf: "flex-end",
-    //     fontSize: "12px",
-    //     color: "#999",
-    //     marginTop: "5px",
-    //   }}
-    // >
-    //   {format(message.createdAt)}
-
-    //   </div>
-    //           </div>
             ))}
           </Box>
       

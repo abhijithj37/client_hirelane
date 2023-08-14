@@ -12,6 +12,7 @@ import axios from "../../axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSeeker } from "../../app/features/seekerSlice";
+import logo from '../../images/logo.png'
  function Register() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -183,11 +184,14 @@ import { setSeeker } from "../../app/features/seekerSlice";
             borderColor:"lightgray",
           }}
         >
+           <Box marginBottom={3} display={"flex"} justifyContent={'center'} width='100%'> 
+            <img width={100} src={logo} alt="logo" />
+            </Box>
           <Typography color={"red"} textAlign={"center"}>
             {errorMessage}
           </Typography>
 
-          <Typography variant="h5" gutterBottom color={"primary"}>
+          <Typography variant="h6" gutterBottom color={"primary"}>
            Sign up
           </Typography>
           <form onSubmit={handleSubmit}>
