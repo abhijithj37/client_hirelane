@@ -139,7 +139,7 @@ import logo from '../../images/logo.png'
       .post(`/employer/signup`,data,{withCredentials:true})
       .then((res)=>{
         dispatch(setEmployer(res.data.user))
-         navigate("/employer");
+         navigate("/emp");
        })
        .catch((error) => {
         if (error.response && error.response.status === 422){

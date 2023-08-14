@@ -170,7 +170,7 @@ const Interviews = () => {
                                 sx={{ textDecoration: "none" }}
                                 variant="body2"
                                 color={"gray"}
-                                onClick={()=>navigate(`/employer/interviewDetails/${element.applicationId}`)}
+                                onClick={()=>navigate(`/emp/interviewDetails/${element.applicationId}`)}
                               >
                                 more...
                               </Typography>

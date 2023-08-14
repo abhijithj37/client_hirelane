@@ -46,7 +46,7 @@ import logo from '../../images/logo.png'
         .post(`employer/login`, formData, { withCredentials: true })
         .then(({ data }) => {
           dispatch(setEmployer(data.user))
-          navigate("/employer");
+          navigate("/emp");
         })
         .catch((error) => {
           if(error.response && error.response.status === 422) {
@@ -63,7 +63,7 @@ import logo from '../../images/logo.png'
         .post(`/employer/googleSignIn`, { token }, { withCredentials: true })
         .then(({ data }) => {
           dispatch(setEmployer(data.user))
-          navigate("/employer");
+          navigate("/emp");
         })
         .catch((error) => {
           if (error.response && error.response.status === 422) {

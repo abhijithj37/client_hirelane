@@ -382,7 +382,7 @@ function Applicants() {
                                   <MenuItem
                                     onClick={() =>
                                       navigate(
-                                        `/employer/candidateInfo/${selectedCandidate?._id}`
+                                        `/emp/candidateInfo/${selectedCandidate?._id}`
                                       )
                                     }
                                   >

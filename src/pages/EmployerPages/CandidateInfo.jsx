@@ -97,7 +97,7 @@ function CandidateInfo() {
                       image: application?.image,
                     })
                   );
-                  navigate("/employer/employerChat");
+                  navigate("/emp/employerChat");
                 }}
               >
                 Message

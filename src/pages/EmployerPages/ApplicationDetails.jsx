@@ -15,7 +15,7 @@ import CandidateDetails from "./CandidateDetails";
 import { setJobApplications } from "../../app/features/employerSlice";
 import { useDispatch, useSelector } from "react-redux";
  
-function ApplicationDetails() {
+function ApplicationDetails(){
   const { id } = useParams();
   const dispatch = useDispatch();
   const { jobApplications }=useSelector((state) => state.employer);
