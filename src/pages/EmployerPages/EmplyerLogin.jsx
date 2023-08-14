@@ -4,13 +4,14 @@ import {
     Container,
     TextField,
     Typography,
-    Link,
+    
    } from "@mui/material";
   import axios from "../../axios";
   import React, { useEffect, useState } from "react";
   import { useNavigate } from "react-router-dom";
   import { useDispatch } from "react-redux";
 import { setEmployer } from "../../app/features/employerSlice";
+import logo from '../../images/logo.png'
      
   function EmployerLogin() {
     const [errorMessage, setErrorMessage] = useState("");
@@ -29,7 +30,7 @@ import { setEmployer } from "../../app/features/employerSlice";
       const passwordRegex =/.{8,}/;
   
       const errors = {};
-      if (!formData.email.match(emailRegex)) {
+      if (!formData.email.match(emailRegex)){
         errors.email = "Invalid email address";
       }
       if (!formData.password.match(passwordRegex)) {
@@ -98,13 +99,16 @@ import { setEmployer } from "../../app/features/employerSlice";
               borderColor: "lightgray",
             }}
           >
+            <Box marginBottom={3} display={"flex"} justifyContent={'center'} width='100%'> 
+            <img width={130} src={logo} alt="logo" />
+            </Box>
             <Typography textAlign={"center"} color={"red"}>
               {errorMessage}
             </Typography>
             <Typography
-              marginBottom={3}
-              variant="h5"
-              gutterBottom
+              marginBottom={1}
+              variant="h6"
+              
               color={"secondary"}
             >
              Employer Login
@@ -137,7 +141,7 @@ import { setEmployer } from "../../app/features/employerSlice";
                 error={!!formError.password}
                 helperText={formError.password||" "}
               />
-              <Button color={'secondary'} onClick={()=>navigate('/employerSignup')} underline="none">
+              <Button color={'secondary'}  onClick={()=>navigate('/employerSignup')} underline="none">
                 Dont have an account?
               </Button>
               <Button
