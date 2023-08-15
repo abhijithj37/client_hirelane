@@ -293,7 +293,7 @@ import logo from '../../images/logo.png'
             </Box>
               
             </>}
-            {!verifying&& <Button color="secondary" onClick={()=>navigate('/employerLogin')} sx={{textTransform:'none'}}>
+            {!verifying&& <Button color="secondary" onClick={()=>navigate('/emp-login')} sx={{textTransform:'none'}}>
                <Typography  >already have an account?</Typography>  
             </Button>}
 

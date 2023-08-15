@@ -264,7 +264,7 @@ dispatch(setUnreadNotifications(notifications?.filter((n)=>n.read===false)))
               variant="body2"
               underline="none"
               onClick={() =>{
-                navigate('/employerLogin')
+                navigate('/emp-login')
 
               }}
               sx={{ my:2,color:"black",display:"block" }}

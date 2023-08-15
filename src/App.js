@@ -128,19 +128,19 @@ function App() {
         <Route path="/join" element={seeker?<Join />: <Navigate to={"/login"} />}></Route>
 
         <Route
-          path="/employerSignup"
+          path="/emp-signup"
           element={
           employer?<Navigate to={"/emp"} />:<EmployerSignUp/>
           }
         />
         <Route
-          path="/employerLogin" 
+          path="/emp-login" 
           element={employer ? <Navigate to={"/emp"} /> : <EmployerLogin />}
         ></Route>
         <Route
           path="/emp"
           element={
-            employer ? <Dashboard /> : <Navigate to="/employerLogin" replace />
+            employer ? <Dashboard /> : <Navigate to="/emp-login" replace />
           }
         >
 
@@ -169,12 +169,12 @@ function App() {
         <Route
           path="/start-meet"
           element={
-          employer ? <EmpInterviewPage /> : <Navigate to={"/employerLogin"} />
+          employer ? <EmpInterviewPage /> : <Navigate to={"/emp-login"} />
           }
         ></Route>
         <Route
           path="/emp-meet/:id"
-          element={employer?<EmpMeet/>:<Navigate to={"/employerLogin"}/>}
+          element={employer?<EmpMeet/>:<Navigate to={"/emp-login"}/>}
         ></Route>
 
       </Route> 

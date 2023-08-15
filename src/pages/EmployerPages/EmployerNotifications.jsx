@@ -10,7 +10,7 @@ function EmployerNotifications() {
     const dispatch=useDispatch()
     const {notifications}=useSelector((state)=>state.employer)
     const handleDeleteNotification=(id)=>{
-        axios.delete(`seeker/my-notification/${id}`,{withCredentials:true}).then(()=>{
+        axios.delete(`employer/my-notification/${id}`,{withCredentials:true}).then(()=>{
            dispatch(setEmployerNotifications(notifications?.filter((n)=>n._id!==id)))
         }).catch((err)=>{
            console.log(err.message)

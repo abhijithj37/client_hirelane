@@ -141,7 +141,7 @@ import logo from '../../images/logo.png'
                 error={!!formError.password}
                 helperText={formError.password||" "}
               />
-              <Button color={'secondary'}  onClick={()=>navigate('/employerSignup')} underline="none">
+              <Button color={'secondary'}  onClick={()=>navigate('/emp-signup')} underline="none">
                 Dont have an account?
               </Button>
               <Button

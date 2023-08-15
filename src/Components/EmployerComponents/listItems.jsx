@@ -24,7 +24,7 @@ import { useConnectEmployer } from "../../Utils/api";
         .get("employer/logout", { withCredentials: true })
         .then(() => {
           dispatch(setEmployer(null));
-          navigate("/employerLogin");
+          navigate("/emp-login");
         })
         .catch((error) => {
           console.log(error.message);
