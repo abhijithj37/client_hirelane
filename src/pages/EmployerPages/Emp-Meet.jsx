@@ -70,7 +70,7 @@ function EmpMeet() {
   const handleCallAccepted = useCallback(
     ({ from, ans }) => {
       peer.setLocalDescription(ans);
-      window.alert("call accepted");
+      
       console.log("Call Accepted!");
       sendStreams();
       socket.emit("send:stream");

@@ -88,8 +88,8 @@ function Home() {
   };
   const handleSearch=(e)=>{
     e.preventDefault();
-    if (jobLocation === "" && jobKeyWord === "") return;
-    const data = {
+    // if (jobLocation === "" && jobKeyWord === "") return;
+    const data =  {
       jobKeyWord,
       jobLocation,
     };
